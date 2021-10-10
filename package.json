@@ -2,12 +2,14 @@
   "name": "alpha-blog",
   "private": true,
   "dependencies": {
+    "@popperjs/core": "^2.9.2",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.3",
+    "bootstrap": "^5.1.2",
     "turbolinks": "^5.2.0",
-    "webpack": "^5.57.1",
+    "webpack": "^4",
     "webpack-cli": "^4.9.0"
   },
   "version": "0.1.0",
