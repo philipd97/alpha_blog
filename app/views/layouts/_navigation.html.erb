@@ -15,11 +15,11 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <% if logged_in? %>
-              <li><%= link_to "Create new Article", new_article_path, class: "dropdown-item" %></li>
+              <%= link_to "Create new Article", new_article_path, class: "dropdown-item" %>
             <% end %>
-            <li><%= link_to "View Articles", articles_path, class: "dropdown-item" %></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <%= link_to "View Articles", articles_path, class: "dropdown-item" %>
+            <hr class="dropdown-divider">
+            <a class="dropdown-item" href="#">Something else here</a>
           </ul>
         </li>
         <% if logged_in? %>
@@ -28,8 +28,9 @@
               Profile [<%= current_user.username %>]
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><%= link_to "View your profile", user_path(current_user), class: "dropdown-item" %></li>
-              <li><%= link_to "Edit your profile", edit_user_path(current_user), class: "dropdown-item" %></li>
+              <%= link_to "View your profile", user_path(current_user), class: "dropdown-item" %>
+              <%= link_to "Edit your profile", edit_user_path(current_user), class: "dropdown-item" %>
+              <%= link_to "Delete profile", user_path(current_user), class: "dropdown-item text-danger", method: :delete, data: { confirm: "Are you sure?" } %>
             </ul>
           </li>
           <li class="nav-item">
