@@ -12,17 +12,17 @@
 
 ActiveRecord::Schema.define(version: 2022_01_19_212538) do
 
-  create_table "article_categories", force: :cascade do |t|
-    t.integer "article_id"
-    t.integer "category_id"
-  end
-
   create_table "articles", force: :cascade do |t|
     t.string "title", null: false
     t.text "description", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer "user_id"
+  end
+
+  create_table "articles_categories", force: :cascade do |t|
+    t.integer "article_id"
+    t.integer "category_id"
   end
 
   create_table "categories", force: :cascade do |t|
